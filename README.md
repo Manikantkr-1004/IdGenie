@@ -22,18 +22,16 @@ pnpm add idgenie
 
 ## Using IdGenie from a CDN
 
-## Using IdGenie from a CDN
-
 [IdGenie is available on jsDelivr](https://www.jsdelivr.com/package/npm/idgenie) and [unpkg](https://unpkg.com/browse/idgenie/), so you can use it directly in the browser without installing via npm. Just include the script, and `idgenie` will be available globally:
 
 ```html
 <!-- Latest version -->
-<script src="https://cdn.jsdelivr.net/npm/idgenie"></script> or
-<script src="https://unpkg.com/idgenie"></script>
+<script src="https://cdn.jsdelivr.net/npm/idgenie/dist/idgenie.umd.min.js"></script> or
+<script src="https://unpkg.com/idgenie/dist/idgenie.umd.min.js"></script>
 
 <!-- Or pin to a specific version -->
-<script src="https://cdn.jsdelivr.net/npm/idgenie@1.0.3"></script> or
-<script src="https://unpkg.com/idgenie@1.0.3"></script>
+<script src="https://cdn.jsdelivr.net/npm/idgenie@1.1.0/dist/idgenie.umd.min.js"></script> or
+<script src="https://unpkg.com/idgenie@1.1.0/dist/idgenie.umd.min.js"></script>
 
 <script>
   const id = idgenie.uniqueId({ length: 20, prefix:'manikant' });

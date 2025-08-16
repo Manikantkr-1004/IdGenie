@@ -18,21 +18,27 @@ yarn add idgenie
 ```bash
 pnpm add idgenie
 ```
-```bash
-<script src="https://cdn.jsdelivr.net/npm/idgenie@1.0.0/dist/cjs/index.min.js"></script>
-```
+
 
 ## Using IdGenie from a CDN
 
-[IdGenie is on jsDelivr](https://www.jsdelivr.com/package/npm/idgenie) which is a "super-fast CDN for developers". Include it in your html:
+## Using IdGenie from a CDN
 
-```javascript
-<script src="https://cdn.jsdelivr.net/npm/idgenie@1.0.0/dist/cjs/index.min.js"></script>
+[IdGenie is available on jsDelivr](https://www.jsdelivr.com/package/npm/idgenie) and [unpkg](https://unpkg.com/browse/idgenie/), so you can use it directly in the browser without installing via npm. Just include the script, and `idgenie` will be available globally:
+
+```html
+<!-- Latest version -->
+<script src="https://cdn.jsdelivr.net/npm/idgenie"></script> or
+<script src="https://unpkg.com/idgenie"></script>
+
+<!-- Or pin to a specific version -->
+<script src="https://cdn.jsdelivr.net/npm/idgenie@1.0.3"></script> or
+<script src="https://unpkg.com/idgenie@1.0.3"></script>
+
 <script>
-  const id = idgenie.uniqueId();
+  const id = idgenie.uniqueId({ length: 20, prefix:'manikant' });
   console.log(id);
 </script>
-
 ```
 
 
@@ -69,7 +75,9 @@ const customId = unqiueId({randomLength: true, alphabet:'manikant123', includeDa
 // It will generate random length of custom unique id between 8-36 also it'll take my 'manikant123' alphabet to generate id and include date, separator('#') where need and
 // generate id securely using crypto and give Unique id in Uppercase as passed casing 'upper'
 
-console.log(customId); // Outputs custom id string
+console.log(customId); // Outputs custom id string 
+
+// You can use in the same way options as your needs else use without it for just id
 ```
 
 

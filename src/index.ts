@@ -148,6 +148,13 @@ function generateMathRandom(alphabet: string, length: number): string {
 /**
  * Generates UUID v4.
  */
-function generateUUID(): string {
-  return crypto.randomUUID(); // Node 14.17+ & all modern Node.js support
+function generateUUID():string {
+  if (typeof crypto !== 'undefined' && crypto.randomUUID) {
+    return crypto.randomUUID();
+  }
+  // Fallback: use a polyfill or custom implementation
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+    const r = Math.random() * 16 | 0, v = c === 'x' ? r : (r & 0x3 | 0x8);
+    return v.toString(16);
+  });
 }

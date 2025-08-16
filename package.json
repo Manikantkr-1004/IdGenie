@@ -1,6 +1,6 @@
 {
   "name": "idgenie",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A magical and flexible ID generator with support for unique IDs, date/time, prefixes, suffixes, and more.",
   "author": "Manikant Kumar",
   "license": "MIT",
